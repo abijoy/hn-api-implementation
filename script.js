@@ -135,6 +135,9 @@ window.onscroll = function(ev) {
 	if((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
 		//window.scrollY = 0;
 		//console.log('After: ', window.innerHeight,window.scrollY,(window.innerHeight + window.scrollY), document.body.offsetHeight);
+		let loader = document.createElement('span');
+		loader.innerHTML = `<img src="spinner.gif" style="height: auto; width: auto"/>`
+		document.body.appendChild(loader)
 		controllerFunc();
 		
 	}
